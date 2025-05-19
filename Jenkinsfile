@@ -4,7 +4,7 @@ pipeline {
     stages {
          stage('Hello') {
             steps {
-               hello()
+               echo 'hello'
             }
         }
         stage('cleanup workspace') {
