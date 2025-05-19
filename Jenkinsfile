@@ -17,6 +17,11 @@ pipeline {
                checkout scm
             }
         }
+        stage('stop $ remove container') {
+            steps {
+               sh "docker stop portainer; docker rm portainer"
+            }
+        }
         stage('run container') {
             steps {
                 sh """
