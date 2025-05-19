@@ -1,4 +1,4 @@
-$Library(Shared@main) _
+$Library('Shared@main') _
 pipeline {
     agent any
 
