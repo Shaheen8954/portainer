@@ -20,6 +20,7 @@ pipeline {
         stage('stop $ remove container') {
             steps {
                sh "docker stop portainer; docker rm portainer"
+               sh "docker volume rm portainer_data portainer_portainer_data"
             }
         }
         stage('run container') {
